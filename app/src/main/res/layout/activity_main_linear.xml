@@ -10,23 +10,30 @@
         android:layout_gravity="center"
         />
 
-    <TextView
-        android:layout_width="wrap_content"
+    <RelativeLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="@dimen/margin_large"
-        android:text="@string/hotel_name" />
+        android:layout_marginTop="@dimen/margin_small">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/margin_small"
-        android:text="@string/hotel_price"
-        android:layout_marginLeft="@dimen/margin_large" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="@dimen/margin_large"
+            android:text="@string/hotel_name" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/margin_large"
+            android:text="@string/hotel_price" />
+    </RelativeLayout>
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="@dimen/margin_large"
+        android:layout_gravity="center"
         android:layout_marginTop="@dimen/margin_small"
         android:text="@string/book_button_text"
         />
