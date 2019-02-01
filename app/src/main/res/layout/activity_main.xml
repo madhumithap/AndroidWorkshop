@@ -38,6 +38,7 @@
         />
 
     <Button
+        android:id="@+id/bookButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/book_button_text"
