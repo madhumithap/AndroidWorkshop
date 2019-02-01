@@ -1,5 +1,6 @@
 package com.example.codher;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -20,7 +21,7 @@ public class MainActivity extends AppCompatActivity {
         bookButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                bookButton.setText(R.string.booking_success_msg);
+                startActivity(new Intent(MainActivity.this, BookingConfirmationActivity.class));
             }
         });
     }
