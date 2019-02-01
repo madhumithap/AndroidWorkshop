@@ -6,11 +6,13 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
     private static final String MAIN_ACTIVITY_TAG = "MainActivity";
+    static final String HOTEL_NAME_INTENT_KEY = "HOTEL_NAME";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,7 +23,10 @@ public class MainActivity extends AppCompatActivity {
         bookButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(MainActivity.this, BookingConfirmationActivity.class));
+                Intent bookingConfirmationIntent = new Intent(MainActivity.this, BookingConfirmationActivity.class);
+                TextView hotelNameView = findViewById(R.id.hotelName);
+                bookingConfirmationIntent.putExtra(HOTEL_NAME_INTENT_KEY, hotelNameView.getText());
+                startActivity(bookingConfirmationIntent);
             }
         });
     }
